@@ -8,16 +8,12 @@ const { performance } = require('perf_hooks');
 const baseUrl = "https://swapi.dev/api"
 const {expectedJsonSchema} = require('./expectedJsonSchema');
 
-const date = new Date();
-
 describe('Planets API', (done) => {
     it('Verify response headers', async () => {
         const res = await request(baseUrl).get('/planets/3/')
-        //res.header["date"].should.equal(date.toUTCString())
         res.header["vary"].should.equal('Accept, Cookie')
         res.header["allow"].should.equal('GET, HEAD, OPTIONS')
         res.header["content-type"].should.equal('application/json')
-        console.log(res.header)
     })
 
     it('Verify response data', async () => {
