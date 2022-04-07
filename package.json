@@ -1,0 +1,22 @@
+{
+  "name": "Paystack_Mocha_API_Test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.2",
+    "nock": "^13.2.4",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1"
+  }
+}
