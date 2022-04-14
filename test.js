@@ -46,7 +46,7 @@ describe('Planets API', (done) => {
         timeTaken.should.not.be.greaterThan(3)
     })
 
-    it.only('Verify the name returns a different value', async () => {
+    it('Verify the name returns a different value', async () => {
         const { mockName } = require('./mock');
         const res = await request(baseUrl).get('/planets/3/')
         res.body.name.should.not.equal("Yavin IV")
